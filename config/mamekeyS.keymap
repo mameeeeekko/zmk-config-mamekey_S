@@ -503,7 +503,7 @@
 &kp LEFT_SHIFT  &kp LCTRL       &none           &none            &none    &trans  &none     &none           &none           &kp RCTRL        &kp RIGHT_SHIFT
 &trans          &trans          &trans          &trans           &trans   &trans  &trans    &trans          &trans          &trans           &trans
             >;
-            sensor-bindings = <&media_control>;
+            sensor-bindings = <&scroll_left_right>;
         };        
         
           JIS {
