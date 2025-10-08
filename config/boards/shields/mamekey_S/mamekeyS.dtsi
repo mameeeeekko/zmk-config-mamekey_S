@@ -106,7 +106,7 @@
             a-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             b-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             steps = <24>;
-            status = "desabled";
+            status = "disabled";
     };
     
         right_encoder: encoder_right {
