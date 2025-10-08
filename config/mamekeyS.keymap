@@ -470,7 +470,7 @@
             bindings = <
 &kp Q               &kp W             &kp E             &kp R            &kp T                             &kp Y           &kp U          &kp I        &kp O      &kp P
 &kp A               &kp S             &kp D             &mt RCTRL F      &kp G           &tog NUM          &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
-&mt LEFT_SHIFT Z    &kp X             &kp C             &kp V            &kp B           &rgb_ug RGB_TOG   &kp N           &kp M          &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z    &kp X             &kp C             &kp V            &kp B           &trans            &kp N           &kp M          &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &mt LCTRL DEL    &lt NUM SPACE   &trans            &kp BACKSPACE   &lt SYM ENTER  &to JIS      &mo BT     &lt MARR LC(SPC)
             >;   
             sensor-bindings = <&mac_enc>;
@@ -543,37 +543,37 @@
 &kp LEFT_SHIFT  &kp LCTRL       &none           &none            &none    &trans  &none     &none           &none           &kp RCTRL        &kp RIGHT_SHIFT
 &trans          &trans          &trans          &trans           &trans   &trans  &trans    &trans          &trans          &trans           &trans
             >;
-            sensor-bindings = <&media_control>;
+            sensor-bindings = <&scroll_left_right>;
         }; 
         
         　BT {
             bindings = <
 &bt BT_CLR_ALL  &none     &none    &none    &bt BT_CLR                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4
 &none           &none     &none    &none    &none        &trans            &out OUT_TOG  &none         &none         &none             &none
-&none           &none     &none    &none    &none        &rgb_ug RGB_TOG   &none         &none         &none         &rgb_ug RGB_BRI   &rgb_ug RGB_BRD
+&none           &none     &none    &none    &none        &trans   &none         &none         &none         &trans   &trans
 &ind_bat        &ind_con  &trans   &trans   &trans       &trans            &trans        &trans        &trans        &trans            &trans
             >;
-            sensor-bindings = <&led_control>;
+            sensor-bindings = <&scroll_left_right>;
         }; 
         
          MOUSE {
             bindings = <
 &bt BT_CLR_ALL  &none     &none    &none    &bt BT_CLR                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4
 &none           &none     &none    &none    &none        &trans            &out OUT_TOG  &none         &none         &none             &none
-&none           &none     &none    &none    &none        &rgb_ug RGB_TOG   &none         &none         &none         &rgb_ug RGB_BRI   &rgb_ug RGB_BRD
+&none           &none     &none    &none    &none        &trans            &none         &none         &none         &&trans           &trans
 &ind_bat        &ind_con  &trans   &trans   &trans       &trans            &trans        &trans        &trans        &trans            &trans
             >;
-            sensor-bindings = <&led_control>;
+            sensor-bindings = <&scroll_left_right>;
         };                    
 
           BT {
             bindings = <
 &bt BT_CLR_ALL  &none     &none    &none    &bt BT_CLR                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4
 &none           &none     &none    &none    &none        &trans            &out OUT_TOG  &none         &none         &none             &none
-&none           &none     &none    &none    &none        &rgb_ug RGB_TOG   &none         &none         &none         &rgb_ug RGB_BRI   &rgb_ug RGB_BRD
+&none           &none     &none    &none    &none        &trans  &none         &none         &none         &trans            &trans
 &ind_bat        &ind_con  &trans   &trans   &trans       &trans            &trans        &trans        &trans        &trans            &trans
             >;
-            sensor-bindings = <&led_control>;
+            sensor-bindings = <&scroll_left_right>;
         };        
     };   
 };
