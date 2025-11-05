@@ -89,13 +89,6 @@
         interrupt-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN) >;
     };
     
-
-    
-    //Prevent accidental AML activation
-    &zip_temp_layer {
-        require-prior-idle-ms = <200>;
-    };
-    
     //right hand trackball
     trackball_central_listener: trackball_central_listener {
         compatible = "zmk,input-listener";

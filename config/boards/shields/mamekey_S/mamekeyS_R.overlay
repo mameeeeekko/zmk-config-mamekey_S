@@ -100,3 +100,8 @@
         39 // win(command)
         >;
     };
+    
+//Prevent accidental AML activation
+    &zip_temp_layer {
+        require-prior-idle-ms = <200>;
+    };
