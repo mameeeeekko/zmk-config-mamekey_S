@@ -72,7 +72,7 @@
 //Extend the Auto Mouse Layer (AML) timeout when a mouse key is pressed.
 &mkp_input_listener {
      input-processors = <&zip_temp_layer 9 500>;
-};
+}
 
 / {
 
