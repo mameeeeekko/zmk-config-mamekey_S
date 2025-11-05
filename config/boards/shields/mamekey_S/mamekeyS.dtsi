@@ -103,7 +103,7 @@
         26 // z(shift)
         38 // ctrl
         39 // win(command)
-    >;
+        >;
     };
     
     //Prevent accidental AML activation
