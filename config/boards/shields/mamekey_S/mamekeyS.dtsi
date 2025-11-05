@@ -89,22 +89,7 @@
         interrupt-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN) >;
     };
     
-    //right hand trackball AML not release key
-    &zip_temp_layer {
-    excluded-positions = <
-        22 // J
-        23 // K
-        24 // L
-        25 // ;
-        34 // m
-        35 // ,
-        14 // d
-        15 // f
-        26 // z(shift)
-        38 // ctrl
-        39 // win(command)
-        >;
-    };
+
     
     //Prevent accidental AML activation
     &zip_temp_layer {
