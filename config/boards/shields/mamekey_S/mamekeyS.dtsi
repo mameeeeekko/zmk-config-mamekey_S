@@ -14,10 +14,10 @@
         compatible = "zmk,matrix-transform";
         rows = <12>;
         columns = <11>;
-		// | SW1   | SW5   | SW9   | SW13  | SW16  |           |       | SW4   | SW8   | SW11  | SW14  | SW18  |
-		// | SW2   | SW6   | SW10  | SW14  | SW17  | JOYS      | SW1   | SW5   | SW9   | SW12  | SW15  | SW19  |
-		// | SW3   | SW7   | SW11  | SW15  | SW18  | SW20      | SW2   | SW6   | SW10  | SW13  | SW16  | SW20  |
-		// | SW4   | SW8   | SW12  | SW23  | SW19  | SW21      | SW3   | SW7   | TRACKBALL     | SW17  | SW21  |  
+		// | SW1 (0)  | SW5   | SW9   | SW13  | SW16  |       |                   |         | SW4 (7)| SW8   | SW11  | SW14  | SW18 (11) |
+		// | SW2 (12) | SW6   | SW10  | SW14  | SW17  | JOYS  | SW22 |     | SW22 | SW1 (20)| SW5    | SW9   | SW12  | SW15  | SW19 (25) |
+		// | SW3 (26) | SW7   | SW11  | SW15  | SW18  | SW20  |                   | SW2 (32)| SW6    | SW10  | SW13  | SW16  | SW20 (37) |
+		// | SW4 (38) | SW8   | SW12  | SW23  | SW19  | SW21  |                   | SW3 (44)| SW7    | TRACKBALL     | SW17  | SW21      |  
         map = <
                       RC(0,1) RC(1,0) RC(2,0) RC(3,0) RC(4,0)                                      RC(7,6) RC(8,6) RC(9,6) RC(10,6) RC(11,6)
                       RC(0,2) RC(1,2) RC(2,1) RC(3,1) RC(4,1) RC(4,5) RC(5,4)    RC(11,10) RC(6,7) RC(7,8) RC(8,7) RC(9,7) RC(10,7) RC(11,7)
@@ -89,6 +89,28 @@
         interrupt-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN) >;
     };
     
+    //right hand trackball AML not release key
+    &zip_temp_layer {
+    excluded-positions = <
+        22 // J
+        23 // K
+        24 // L
+        25 // ;
+        34 // m
+        35 // ,
+        14 // d
+        15 // f
+        26 // z(shift)
+        38 // ctrl
+        39 // win(command)
+    >;
+    };
+    
+    //Prevent accidental AML activation
+    &zip_temp_layer {
+        require-prior-idle-ms = <200>;
+    };
+    
     //right hand trackball
     trackball_central_listener: trackball_central_listener {
         compatible = "zmk,input-listener";
@@ -97,7 +119,7 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;         //Y軸反転
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             //<&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-            //<&zip_temp_layer 5 500>;                            //オートマウスレイヤーの選択
+            <&zip_temp_layer 9 500>;                            //オートマウスレイヤーの選択
     };
 
     
