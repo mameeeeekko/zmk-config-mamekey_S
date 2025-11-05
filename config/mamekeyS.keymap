@@ -69,12 +69,12 @@
     quick-tap-ms = <0>;
 }
 
-//Extend the Auto Mouse Layer (AML) timeout when a mouse key is pressed.
-&mkp_input_listener {
-     input-processors = <&zip_temp_layer 9 500>;
-}
-
 / {
+
+    //Extend the Auto Mouse Layer (AML) timeout when a mouse key is pressed.
+      &mkp_input_listener {
+         input-processors = <&zip_temp_layer 9 500>;
+         };
 
     macros {
         to_layer_0: to_layer_0 {
