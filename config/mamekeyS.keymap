@@ -354,7 +354,7 @@
     w_shift_ctrl_none_p: win_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp LG(LC(RIGHT_ARROW)), <&w_shift_ctrl_p>;
+        bindings = <&kp LG(LC(RIGHT_ARROW))>, <&w_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_p: win-enc-positive {
@@ -406,7 +406,7 @@
     w_shift_ctrl_none_n: win_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp LG(LC(LEFT_ARROW)>, <&w_shift_ctrl_n>;
+        bindings = <&kp LG(LC(LEFT_ARROW))>, <&w_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_n: win-enc-negative {
@@ -688,7 +688,7 @@
             >;
             sensor-bindings = <&scroll_up_down 
             &vol_up_down                   
-                                >;
+             >;
         };                    
 
           SCROLL {
