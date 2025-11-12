@@ -311,54 +311,33 @@
             bindings = <&lt WARR LA(GRAVE)>, <&kp LC(SPC)>; 
         };
         
-    //encorder control WIN  
-    w_r_alt_p: win-right-alt-positive {
+//encorder control WIN  
+  //positive
+  
+    //window change (alt D)   
+    w_alt_p: win-alt-gui-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp RIGHT>;
-        mods = <(MOD_RALT)>;
+        bindings = <&none>, <&kp TAB>;
+        mods = <(MOD_LALT|MOD_RALT)>;
         keep-mods = <(MOD_RALT)>;
     };
-    w_alt_p: win-alt-positive {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_r_alt_p>, <&kp TAB>;
-        mods = <(MOD_LALT)>;
-        keep-mods = <(MOD_LALT)>;
-    };    
-    w_r_gui_p: win-right-gui-positive {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp LC(RIGHT)>;
-        mods = <(MOD_RGUI)>;
-        keep-mods = <(MOD_RGUI)>;
-    };
-    w_gui_p: win-gui-positive {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_r_gui_p>, <&kp RIGHT>;
-        mods = <(MOD_LGUI)>;
-        keep-mods = <(MOD_LGUI)>;
-    };    
-    w_alt_gui_p: win-alt-gui-positive {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_gui_p>, <&w_alt_p>;
-        mods = <(MOD_LALT|MOD_RALT)>;
-    };
+    // tab move (Rctrl F)
     w_r_ctrl_p: win-right-ctrl-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp TAB>;
+        bindings = <&none>, <&kp TAB>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
-    };    
+    }; 
+    // updown arrow (Lctrl)   
     w_ctrl_p: win-ctrl-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&w_r_ctrl_p>, <&kp DOWN>;
         mods = <(MOD_LCTL)>;
     };
+    // leftright arrow (shift)
     w_shift_p: win-shift-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -371,66 +350,46 @@
         bindings = <&w_shift_p>, <&w_ctrl_p>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
+    //none is desktop move
     w_shift_ctrl_none_p: win_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp C_VOL_UP>, <&w_shift_ctrl_p>;
+        bindings = <&kp LG(LC(RIGHT_ARROW)), <&w_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_p: win-enc-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&w_shift_ctrl_none_p>, <&w_alt_gui_p>;
-        mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
-    };
-   
-    w_r_alt_n: win-right-alt-negative {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp LEFT>;
-        mods = <(MOD_RALT)>;
-        keep-mods = <(MOD_RALT)>;
-    };
-    w_alt_n: win-alt-negative {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_r_alt_n>, <&kp LS(TAB)>;
-        mods = <(MOD_LALT)>;
-        keep-mods = <(MOD_LALT)>;
-    };    
-    w_r_gui_n: win-right-gui-negative {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp LC(LEFT)>;
-        mods = <(MOD_RGUI)>;
-        keep-mods = <(MOD_RGUI)>;
-    };
-    w_gui_n: win-gui-negative {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_r_gui_n>, <&kp LEFT>;
-        mods = <(MOD_LGUI)>;
-        keep-mods = <(MOD_LGUI)>;
-    };    
-    w_alt_gui_n: win-alt-gui-negative {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&w_gui_n>, <&w_alt_n>;
+        bindings = <&w_shift_ctrl_none_p>, <&w_alt_p>;
         mods = <(MOD_LALT|MOD_RALT)>;
     };
+ 
+ //negative
+   
+    //window change (alt D)     
+    w_alt_n: win-alt-gui-negative {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&none>, <&kp LS(TAB)>;
+        mods = <(MOD_LALT|MOD_RALT)>;
+        keep-mods = <(MOD_RALT)>;
+    };
+    // tab move (Rctrl F)
     w_r_ctrl_n: win-right-ctrl-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp LS(TAB)>;
+        bindings = <&none>, <&kp LS(TAB)>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
-    };    
+    };
+    // updown arrow (Lctrl)    
     w_ctrl_n: win-ctrl-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&w_r_ctrl_n>, <&kp UP>;
         mods = <(MOD_LCTL)>;
     };
+    // leftright arrow (shift)
     w_shift_n: win-shift-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -443,17 +402,18 @@
         bindings = <&w_shift_n>, <&w_ctrl_n>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
+    //none is desktop move
     w_shift_ctrl_none_n: win_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp C_VOL_DN>, <&w_shift_ctrl_n>;
+        bindings = <&kp LG(LC(LEFT_ARROW)>, <&w_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_n: win-enc-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&w_shift_ctrl_none_n>, <&w_alt_gui_n>;
-        mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
+        bindings = <&w_shift_ctrl_none_n>, <&w_alt_n>;
+        mods = <(MOD_LALT|MOD_RALT)>;
     };
     
     win_enc: win-enc {
@@ -464,8 +424,9 @@
     };
     
 //encorder control MAC
+  //positive
 
-    //app select    
+    //app select     (command D)    
     m_gui_p: mac-gui-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -473,20 +434,22 @@
         mods = <(MOD_LGUI|MOD_RGUI)>;
         keep-mods = <(MOD_LGUI)>;
     };    
-    //browser tab move
+    //browser tab move  (Rctrl F)
     m_r_ctrl_p: mac-right-ctrl-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp TAB>;
+        bindings = <&none>, <&kp TAB>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
-    };  
+    }; 
+    // updown allow (LCtrl) 
     m_ctrl_p: mac-ctrl-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&m_r_ctrl_p>, <&kp DOWN>;
         mods = <(MOD_LCTL)>;
     }; 
+    // LeftRight allow (Shift)
     m_shift_p: mac-shift-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -499,10 +462,11 @@
         bindings = <&m_shift_p>, <&m_ctrl_p>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
+    // none is desktop move
     m_shift_ctrl_none_p: mac_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp C_VOL_UP>, <&m_shift_ctrl_p>;
+        bindings = <&kp LC(RIGHT_ARROW)>, <&m_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     mac_enc_p: mac-enc-positive {
@@ -511,7 +475,10 @@
         bindings = <&m_shift_ctrl_none_p>, <&m_gui_p>;
         mods = <(MOD_LGUI|MOD_RGUI)>;
     };
-    //app select    
+    
+  //negative    
+    
+    //app select  (command D)  
     m_gui_n: mac-gui-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -519,36 +486,39 @@
         mods = <(MOD_LGUI|MOD_RGUI)>;
         keep-mods = <(MOD_LGUI)>;
     };    
-    //browser tab move
+    //browser tab move (Rctrl F)
     m_r_ctrl_n: mac-right-ctrl-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp 0>, <&kp LS(TAB)>;
+        bindings = <&none>, <&kp LS(TAB)>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
-    };    
+    }; 
+    // Updown allow (LCtrl)   
     m_ctrl_n: mac-ctrl-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&m_r_ctrl_n>, <&kp UP>;
         mods = <(MOD_LCTL)>;
     }; 
+    // LeftRight allow (Shift)
     m_shift_n: mac-shift-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&none>, <&kp LEFT>;
         mods = <(MOD_RSFT|MOD_LSFT)>; 
-  };         
+    };         
     m_shift_ctrl_n: mac-shift-ctrl-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&m_shift_n>, <&m_ctrl_n>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
+    // none is desktop move
     m_shift_ctrl_none_n: mac_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp C_VOL_DN>, <&m_shift_ctrl_n>;
+        bindings = <&kp LC(LEFT_ARROW)>, <&m_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     mac_enc_n: mac-enc-negative {
@@ -585,7 +555,7 @@
           default_layer {
             bindings = <
 &kp Q               &kp W             &kp E             &kp R            &kp T                                                    &kp Y           &kp U          &kp I        &kp O      &kp P
-&kp A               &kp S             &kp D             &mt RCTRL F      &kp G     &kp C_MUTE   &kp CAPSLOCK   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
+&kp A               &kp S       &mt LEFT_WIN D          &mt RCTRL F      &kp G     &kp C_MUTE   &kp CAPSLOCK   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X  &kp C     &kp V     &kp B    &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LCTRL DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
 
@@ -640,7 +610,7 @@
           JIS {
             bindings = <
 &kp Q             &kp W             &kp E            &kp R           &kp T                                                    &kp Y          &kp U           &kp I        &kp O      &kp P
-&kp A             &mt RIGHT_WIN S   &mt RIGHT_ALT D  &mt RCTRL F     &kp G       &trans  &kp LS(CAPSLOCK)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
+&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &trans  &kp LS(CAPSLOCK)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &tog WARR       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LCTRL DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
