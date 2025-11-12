@@ -559,7 +559,9 @@
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X  &kp C     &kp V     &kp B    &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LCTRL DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
 
-&kp UP_ARROW        &kp LEFT_ARROW        &kp DOWN_ARROW        &kp RIGHT_ARROW 
+        &kp UP_ARROW        
+&kp LEFT_ARROW  &kp RIGHT_ARROW 
+        &kp DOWN_ARROW              
             >;   
             sensor-bindings = <&mac_enc
                                &vol_up_down
@@ -573,7 +575,9 @@
 &kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LC(UP_ARROW)  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
 &trans        &trans         &trans                &trans                 &trans            &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans 
             >; 
             sensor-bindings = <&scroll_up_down
             &vol_up_down
@@ -587,7 +591,9 @@
 &kp F6         &kp F7             &kp F8           &none         &kp PIPE            &trans                     &trans  &kp TILDE  &kp BACKSLASH   &none        &kp LEFT_BRACE        &kp RIGHT_BRACE 
 &trans         &trans             &trans           &trans        &trans              &trans                     &trans  &trans                                  &trans                &trans 
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans 
             >;  
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -601,7 +607,9 @@
 &kp LEFT_SHIFT  &kp LCTRL       &none           &none            &none    &trans                  &trans    &none     &none           &none           &kp RCTRL        &kp RIGHT_SHIFT
 &trans          &trans          &trans          &trans           &trans   &trans                  &trans    &trans                                    &trans           &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans  
             >;
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -614,7 +622,9 @@
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &tog WARR       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LCTRL DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
-&kp UP_ARROW        &kp LEFT_ARROW        &kp DOWN_ARROW        &kp RIGHT_ARROW 
+        &kp UP_ARROW        
+&kp LEFT_ARROW  &kp RIGHT_ARROW 
+        &kp DOWN_ARROW
             >;
             sensor-bindings = <&win_enc
             &vol_up_down
@@ -628,7 +638,9 @@
 &kp LC(Z)      &kp LC(Y)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LG(D)  &trans                  &trans   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans  
             >;
             sensor-bindings = <&scroll_up_down
             &vol_up_down
@@ -642,7 +654,9 @@
 &kp F6        &kp F7      &kp F8           &none         &kp JP_PIPE   &trans                   &trans  &kp JP_TILDE  &kp JP_YEN     &none        &kp JP_LBRC  &kp JP_RBRC 
 &trans        &trans      &trans           &trans        &trans        &trans                   &trans  &trans                                    &trans       &trans 
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans  
             >;
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -656,7 +670,9 @@
 &kp LEFT_SHIFT  &kp LCTRL       &none           &none            &none    &trans                  &trans  &none     &none           &none           &kp RCTRL        &kp RIGHT_SHIFT
 &trans          &trans          &trans          &trans           &trans   &trans                  &trans  &trans                              &trans           &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans 
             >;
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -670,7 +686,9 @@
 &none           &none     &none    &none    &none        &none                   &none  &none         &none         &none         &trans   &trans
 &ind_bat        &ind_con  &trans   &trans   &trans       &trans                   &trans  &trans                          &trans            &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans 
             >;
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -684,7 +702,9 @@
 &none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
-&kp UP_ARROW        &kp LEFT_ARROW        &kp DOWN_ARROW        &kp RIGHT_ARROW  
+        &trans        
+&trans         &trans                
+        &trans  
             >;
             sensor-bindings = <&scroll_up_down 
             &vol_up_down                   
@@ -698,7 +718,9 @@
 &none           &none     &none    &none    &none        &trans                       &trans  &none         &none         &none         &none      &none
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
-&trans        &trans         &trans                &trans 
+        &trans        
+&trans         &trans                
+        &trans 
             >;
             sensor-bindings = <&scroll_left_right
                                &vol_up_down
