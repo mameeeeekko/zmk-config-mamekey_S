@@ -6,6 +6,9 @@
     col-offset = <6>;
 };
 
+&xiao_serial { 
+    status = "disabled"; 
+}; 
 
 &kscan0 {
         gpios
