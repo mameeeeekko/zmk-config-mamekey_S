@@ -87,17 +87,17 @@
 //right hand trackball AML not release key
     &zip_temp_layer {
     excluded-positions = <
-        22 // J
-        23 // K
-        24 // L
-        25 // ;
-        34 // m
-        35 // ,
-        14 // d
-        15 // f
-        26 // z(shift)
-        38 // ctrl
-        39 // win(command)
+        19 // J
+        20 // K
+        21 // L
+        22 // ;
+        31 // m
+        32 // ,
+        12 // d
+        13 // f
+        24 // z(shift)
+        36 // ctrl
+        37 // win(command)
         >;
     };
     
