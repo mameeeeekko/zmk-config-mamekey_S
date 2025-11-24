@@ -441,6 +441,7 @@
         bindings = <&none>, <&kp TAB>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
+        tap-ms = <20>;
     }; 
     // updown allow (LCtrl) 
     m_ctrl_p: mac-ctrl-positive {
@@ -468,6 +469,7 @@
         #binding-cells = <0>;
         bindings = <&kp LC(RIGHT_ARROW)>, <&m_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
+        tap-ms = <40>;  // 反応速度を遅く
     };
     mac_enc_p: mac-enc-positive {
         compatible = "zmk,behavior-mod-morph";
@@ -493,6 +495,7 @@
         bindings = <&none>, <&kp LS(TAB)>;
         mods = <(MOD_RCTL)>;
         keep-mods = <(MOD_RCTL)>;
+        tap-ms = <20>;
     }; 
     // Updown allow (LCtrl)   
     m_ctrl_n: mac-ctrl-negative {
@@ -520,6 +523,7 @@
         #binding-cells = <0>;
         bindings = <&kp LC(LEFT_ARROW)>, <&m_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
+        tap-ms = <40>;  // 反応速度を遅く
     };
     mac_enc_n: mac-enc-negative {
         compatible = "zmk,behavior-mod-morph";
