@@ -420,7 +420,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&win_enc_n>, <&win_enc_p>;
-        tap-ms = <10>;
+        tap-ms = <20>;
     };
     
 //encorder control MAC
@@ -466,10 +466,9 @@
     // none is desktop move
     m_shift_ctrl_none_p: mac_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
-        #sensor-binding-cells = <0>;
+        #binding-cells = <0>;
         bindings = <&kp LC(RIGHT_ARROW)>, <&m_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
-        triggers-per-rotation = <2>;
     };
     mac_enc_p: mac-enc-positive {
         compatible = "zmk,behavior-mod-morph";
@@ -519,10 +518,9 @@
     // none is desktop move
     m_shift_ctrl_none_n: mac_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
-        #sensor-binding-cells = <0>;
+        #binding-cells = <0>;
         bindings = <&kp LC(LEFT_ARROW)>, <&m_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
-        triggers-per-rotation = <2>;
     };
     mac_enc_n: mac-enc-negative {
         compatible = "zmk,behavior-mod-morph";
@@ -535,7 +533,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&mac_enc_n>, <&mac_enc_p>;
-        tap-ms = <10>;
+        tap-ms = <20>;
     }; 
      
     
