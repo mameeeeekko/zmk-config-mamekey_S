@@ -552,6 +552,7 @@
         #binding-cells = <0>;
         bindings =<&kp LS(TAB)>;
         keep-mods = <(MOD_LGUI)>;
+    }; 
         
       app_right: mac-app-right {
         compatible = "zmk,behavior-mod-morph";
@@ -559,7 +560,9 @@
         bindings = <&kp LS(TAB)>;
         keep-mods = <(MOD_LGUI)>;                   
               
-};
+    };
+
+ };    
 
 
 
