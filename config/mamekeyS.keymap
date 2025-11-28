@@ -544,7 +544,20 @@
             #binding-cells = <0>;
             bindings = <&kp JP_SEMI>, <&kp JP_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-     };                    
+     }; 
+     
+   //arrow
+      app_left: mac-app-left {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings =<&kp LS(TAB)>;
+        keep-mods = <(MOD_LGUI)>;
+        
+      app_right: mac-app-right {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LS(TAB)>;
+        keep-mods = <(MOD_LGUI)>;                   
               
 };
 
@@ -556,7 +569,7 @@
           default_layer {
             bindings = <
 &kp Q               &kp W             &kp E             &kp R            &kp T                                                    &kp Y           &kp U          &kp I        &kp O      &kp P
-&kp A               &kp S       &mt LEFT_WIN D          &mt RCTRL F      &kp G     &kp C_MUTE   &kp CAPSLOCK   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
+&kp A               &kp S       &mt LEFT_WIN D          &mt RCTRL F      &kp G     &kp C_MUTE   &kp LA(C)   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X  &kp C     &kp V     &kp B    &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LCTRL DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
 
@@ -571,14 +584,14 @@
 
           NUM_FUNC {
             bindings = <
-&kp LG(LS(NUMBER_4))  &kp LG(X)   &kp LC(LS(TAB))   &kp LC(TAB)           &kp LG(R)                                         &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
-&kp LG(A)     &kp LG(C)      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(V)         &trans  &trans  &trans  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS
-&kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LC(UP_ARROW)  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
+&kp LG(LS(NUMBER_4))  &kp LG(X)   &kp LC(LS(TAB))   &kp LC(TAB)           &kp LG(T)                                         &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
+&kp LG(A)     &kp LG(C)      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(V)         &LC(LA(L))  &trans  &trans  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS
+&kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LG(N)  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
 &trans        &trans         &trans                &trans                 &trans            &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
-        &trans        
-&trans         &trans                
-        &trans 
+        &kp LC(UP_ARROW)       
+&app_left         &app_right               
+        &kp LC(DOWN_ARROW) 
             >; 
             sensor-bindings = <&scroll_up_down
             &vol_up_down
@@ -619,7 +632,7 @@
           JIS {
             bindings = <
 &kp Q             &kp W             &kp E            &kp R           &kp T                                                    &kp Y          &kp U           &kp I        &kp O      &kp P
-&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &trans  &kp LS(CAPSLOCK)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
+&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &trans  &kp LG(D)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &tog WARR       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LCTRL DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
@@ -634,7 +647,7 @@
         
           JIS_NUM {
             bindings = <
-&kp LG(LS(S))  &kp LC(X)  &kp LC(LS(TAB))         &kp LC(TAB)              &kp F5                                      &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
+&kp LG(LS(S))  &kp LC(X)  &kp LC(LS(TAB))         &kp LC(TAB)              &kp LC(LS(N))                                      &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
 &kp LC(A)      &kp LC(C)  &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)      &kp LC(V)  &trans  &trans  &trans  &trans   &kp JP_ASTRK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS
 &kp LC(Z)      &kp LC(Y)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LG(D)  &trans                  &trans   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
