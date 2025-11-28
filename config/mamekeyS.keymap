@@ -573,8 +573,8 @@
             bindings = <
 &kp Q               &kp W             &kp E             &kp R            &kp T                                                    &kp Y           &kp U          &kp I        &kp O      &kp P
 &kp A               &kp S       &mt LEFT_WIN D          &mt RCTRL F      &kp G     &kp C_MUTE   &kp LA(C)   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X  &kp C     &kp V     &kp B    &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
-&kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LCTRL DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X      &kp C      &kp V            &kp B     &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
+&kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LEFT_WIN DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
 
         &kp UP_ARROW        
 &kp LEFT_ARROW  &kp RIGHT_ARROW 
@@ -588,9 +588,9 @@
           NUM_FUNC {
             bindings = <
 &kp LG(LS(NUMBER_4))  &kp LG(X)   &kp LC(LS(TAB))   &kp LC(TAB)           &kp LG(T)                                         &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
-&kp LG(A)     &kp LG(C)      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(V)         &LC(LA(L))  &trans  &trans  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS
-&kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LG(N)  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
-&trans        &trans         &trans                &trans                 &trans            &trans                  &trans  &trans                                     &kp PERIOD       &trans
+&kp LG(A)     &kp LG(C)      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(V)  &kp LC(LA(L))  &trans  &trans  &trans  &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS
+&kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LG(LS(N))  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
+&trans        &trans         &trans                &trans                 &trans     &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
         &kp LC(UP_ARROW)       
 &app_left         &app_right               
@@ -605,7 +605,7 @@
             bindings = <
 &kp LS(SLASH)  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp ASTERISK  &kp PLUS                                               &kp CARET  &kp UNDERSCORE  &none        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp AMPERSAND  &kp SINGLE_QUOTE   &kp DOLLAR       &none         &kp LA(BACKSLASH)   &trans   &trans   &trans   &trans  &kp HASH   &none           &kp PERCENT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp F6         &kp F7             &kp F8           &none         &kp PIPE            &trans                     &trans  &kp TILDE  &kp BACKSLASH   &none        &kp LEFT_BRACE        &kp RIGHT_BRACE 
+&kp F6         &kp F7             &kp F8           &none         &kp PIPE            &trans                    &trans  &kp TILDE  &kp BACKSLASH   &none        &kp LEFT_BRACE        &kp RIGHT_BRACE 
 &trans         &trans             &trans           &trans        &trans              &trans                     &trans  &trans                                  &trans                &trans 
 
         &trans        
@@ -635,9 +635,9 @@
           JIS {
             bindings = <
 &kp Q             &kp W             &kp E            &kp R           &kp T                                                    &kp Y          &kp U           &kp I        &kp O      &kp P
-&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &trans  &kp LG(D)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
+&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &kp C_MUTE  &kp LG(D)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &tog WARR       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LCTRL DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
+&kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LEFT_WIN DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
         &kp UP_ARROW        
 &kp LEFT_ARROW  &kp RIGHT_ARROW 
@@ -650,9 +650,9 @@
         
           JIS_NUM {
             bindings = <
-&kp LG(LS(S))  &kp LC(X)  &kp LC(LS(TAB))         &kp LC(TAB)              &kp LC(LS(N))                                      &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
+&kp LG(LS(S))  &kp LC(X)  &kp LC(LS(TAB))         &kp LC(TAB)              &kp LC(T)                                      &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS
 &kp LC(A)      &kp LC(C)  &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW)      &kp LC(V)  &trans  &trans  &trans  &trans   &kp JP_ASTRK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS
-&kp LC(Z)      &kp LC(Y)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LG(D)  &trans                  &trans   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
+&kp LC(Z)      &kp LC(Y)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LC(LS(N))  &trans                &trans   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
 
         &trans        
