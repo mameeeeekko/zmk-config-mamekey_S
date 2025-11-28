@@ -548,17 +548,19 @@
      
    //arrow
       app_left: mac-app-left {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings =<&kp LS(TAB)>;
-        keep-mods = <(MOD_LGUI)>;
+        compatible = "zmk,behavior-hold-tap";
+        tapping-term-ms = <150>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp LGUI>, <&kp LGUI &kp LS(TAB)>;
     }; 
         
       app_right: mac-app-right {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp LS(TAB)>;
-        keep-mods = <(MOD_LGUI)>;                   
+        compatible = "zmk,behavior-hold-tap";
+        tapping-term-ms = <150>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp LGUI>, <&kp LGUI &kp TAB>;                
               
     };
 
