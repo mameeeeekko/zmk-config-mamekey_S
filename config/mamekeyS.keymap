@@ -545,24 +545,6 @@
             bindings = <&kp JP_SEMI>, <&kp JP_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
      }; 
-     
-   //arrow
-      app_left: mac-app-left {
-        compatible = "zmk,behavior-hold-tap";
-        tapping-term-ms = <150>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp LGUI>, <&kp LGUI &kp LS(TAB)>;
-    }; 
-        
-      app_right: mac-app-right {
-        compatible = "zmk,behavior-hold-tap";
-        tapping-term-ms = <150>;
-        quick_tap_ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp LGUI>, <&kp LGUI &kp TAB>;                
-              
-    };
 
  };    
 
@@ -595,7 +577,7 @@
 &trans        &trans         &trans                &trans                 &trans     &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
         &kp LC(UP_ARROW)       
-&app_left         &app_right               
+&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)               
         &kp LC(DOWN_ARROW) 
             >; 
             sensor-bindings = <&scroll_up_down
@@ -658,7 +640,7 @@
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
 
         &trans        
-&trans         &trans                
+&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
         &trans  
             >;
             sensor-bindings = <&scroll_up_down
