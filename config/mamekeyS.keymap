@@ -20,9 +20,9 @@
 #define WARR 7 //WIN
 #define BT 8
 #define MOUSE 9
-#define SCROLL 10
-
-
+#define MOUSE2 10
+#define MOUSE3 11
+#define SCROLL 12
 
 #define JP_ZKHK  GRAVE        // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
 #define JP_MINUS MINUS        // -
@@ -132,6 +132,18 @@
             bindings = <&kp JP_SQT>;
             layers = <JIS>; 
             key-positions = <5 6>;
+        };
+        
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            layers = <0>; 
+            key-positions = <4 5>;
+        };
+        
+        double_quotation_JIS {
+            bindings = <&kp JP_DQT>;
+            layers = <JIS>; 
+            key-positions = <4 5>;
         };
         
         
@@ -576,9 +588,9 @@
 &kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LG(LS(N))  &trans                  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
 &trans        &trans         &trans                &trans                 &trans     &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
-        &kp LC(UP_ARROW)       
-&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)               
-        &kp LC(DOWN_ARROW) 
+        &trans        
+&trans         &trans                
+        &trans  
             >; 
             sensor-bindings = <&scroll_up_down
             &vol_up_down
@@ -592,9 +604,9 @@
 &kp F6         &kp F7             &kp F8           &none         &kp PIPE            &trans                    &trans  &kp TILDE  &kp BACKSLASH   &none        &kp LEFT_BRACE        &kp RIGHT_BRACE 
 &trans         &trans             &trans           &trans        &trans              &trans                     &trans  &trans                                  &trans                &trans 
 
-        &trans        
-&trans         &trans                
-        &trans 
+        &kp LC(UP_ARROW)       
+&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)               
+        &kp LC(DOWN_ARROW) 
             >;  
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -640,7 +652,7 @@
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
 
         &trans        
-&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
+&trans         &trans                
         &trans  
             >;
             sensor-bindings = <&scroll_up_down
@@ -656,7 +668,7 @@
 &trans        &trans      &trans           &trans        &trans        &trans                   &trans  &trans                                    &trans       &trans 
 
         &trans        
-&trans         &trans                
+&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
         &trans  
             >;
             sensor-bindings = <&scroll_left_right
@@ -701,17 +713,50 @@
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
 &none           &none     &mkp MB4   &mkp MB5    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
 &none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
+&trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                       &trans  &trans                            &trans            &trans
+
+        &trans        
+&trans         &trans                
+        &trans  
+            >;
+            sensor-bindings = <&scroll_left_right 
+            &scroll_up_down                   
+             >;
+        };                    
+
+         
+         MOUSE2 {
+            bindings = <
+&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
+&none           &none     &mkp MB4   &mkp MB5    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
+&none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
         &trans        
 &trans         &trans                
         &trans  
             >;
-            sensor-bindings = <&scroll_up_down 
-            &vol_up_down                   
+            sensor-bindings = <&scroll_left_right 
+            &scroll_up_down                  
              >;
-        };                    
+        };        
 
+         MOUSE3 {
+            bindings = <
+&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
+&none           &none     &mkp MB4   &mkp MB5    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
+&none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
+&trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
+
+        &trans        
+&trans         &trans                
+        &trans  
+            >;
+            sensor-bindings = <&scroll_left_right 
+            &scroll_up_down                   
+             >;
+        }; 
+        
           SCROLL {
             bindings = <
 &none          &none     &none    &none     &none                                             &none         &none         &none         &none      &none
@@ -724,8 +769,11 @@
         &trans 
             >;
             sensor-bindings = <&scroll_left_right
-                               &vol_up_down
+                               &scroll_up_down
             >;
-        };        
+        };               
+        
+        
+               
     };   
 };
