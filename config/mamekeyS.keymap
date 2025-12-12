@@ -137,13 +137,13 @@
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             layers = <0>; 
-            key-positions = <4 5>;
+            key-positions = <3 4>;
         };
         
         double_quotation_JIS {
             bindings = <&kp JP_DQT>;
             layers = <JIS>; 
-            key-positions = <4 5>;
+            key-positions = <3 4>;
         };
         
         
