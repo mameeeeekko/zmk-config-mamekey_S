@@ -1,4 +1,4 @@
-#include "mamekeyS.dtsi"
+&kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)#include "mamekeyS.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
@@ -112,7 +112,10 @@
         27 // v
         36 // ctrl
         37 // win(command)
-        >;
+        40 // space
+        41 // Del
+        
+                >;
     };
     
 //Prevent accidental AML activation
