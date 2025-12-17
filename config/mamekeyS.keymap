@@ -712,7 +712,7 @@
             bindings = <
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
 &none           &none     &mkp MB4   &mkp MB5    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
-&none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
+&none           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)     &none        &trans                       &trans  &kp LS(LG(V))         &kp LG(V)        &none         &none      &none
 &trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                       &trans  &trans                            &trans            &trans
 
         &trans        
