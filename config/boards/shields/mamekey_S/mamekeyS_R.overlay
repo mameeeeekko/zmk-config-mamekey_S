@@ -2,6 +2,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+
 &default_transform {
     col-offset = <6>;
 };
@@ -76,7 +77,7 @@
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 7>,                          //スクロール量をa/b倍
-            <&zip_scroll_x_scaler 1 2>;                        //X軸のスクロール速度調整
+            //<&zip_scroll_x_scaler 1 2>;                        //X軸のスクロール速度調整
     };
     
     slower {
@@ -100,10 +101,10 @@
     excluded-positions = <
         2 // e
         3 // r
-        19 // J
-        20 // K
-        21 // L
-        22 // ;
+        20 // J
+        21 // K
+        22 // L
+        23 // ;
         30 // n
         31 // m
         32 // ,
