@@ -67,6 +67,21 @@
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
+    
+    def_aml {
+        layers = <0>;
+        input-processors =
+        <&sensor_rotation_right>,
+        <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
+    };
+    
+    win_aml {
+        layers = <4>;
+        input-processors = 
+            <&sensor_rotation_right>,
+            <&zip_temp_layer 13 600>;
+    };  
+    
 
     scroller {
         layers = <12>;
@@ -79,6 +94,8 @@
             <&zip_scroll_scaler 1 10>;                      //スクロール量をa/b倍
             //<&zip_scroll_x_scaler 1 2>;                 //X軸のスクロール速度調整 v4.1で使えない？
            };
+           
+    
     
     slower {
         layers = <10>;
