@@ -76,7 +76,7 @@
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            <&zip_scroll_scaler 1 4>;                      //スクロール量をa/b倍
+            <&zip_scroll_scaler 1 10>;                      //スクロール量をa/b倍
             //<&zip_scroll_x_scaler 1 2>;                 //X軸のスクロール速度調整 v4.1で使えない？
            };
     
