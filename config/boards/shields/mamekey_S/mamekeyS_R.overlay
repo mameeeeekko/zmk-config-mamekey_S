@@ -80,13 +80,13 @@
     mac_mouse {
         layers = <9>;
         input-processors =
-           <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+          // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
     };
     
     win_mouse {
         layers = <12>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+           // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
     };  
     
 
