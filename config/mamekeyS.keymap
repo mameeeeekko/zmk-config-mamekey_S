@@ -23,6 +23,7 @@
 #define MOUSE2 10
 #define MOUSE3 11
 #define SCROLL 12
+#define WMOUSE 13
 
 #define JP_ZKHK  GRAVE        // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
 #define JP_MINUS MINUS        // -
@@ -771,6 +772,22 @@
             sensor-bindings = <&scroll_left_right
                                &scroll_up_down
             >;
+        }; 
+        
+              WMOUSE {
+            bindings = <
+&none          &none     &kp LC(LS(TAB))         &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
+&none           &none     &kp LA(LEFT_ARROW)      &kp LA(RIGHT_ARROW))    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
+&none           &none     &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))     &none        &trans                       &trans  &kp LS(LG(V))         &kp LG(V)        &none         &none      &none
+&trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                       &trans  &trans                            &trans            &trans
+
+        &trans        
+&trans         &trans                
+        &trans  
+            >;
+            sensor-bindings = <&scroll_left_right 
+            &scroll_up_down                   
+             >;
         };               
         
         
