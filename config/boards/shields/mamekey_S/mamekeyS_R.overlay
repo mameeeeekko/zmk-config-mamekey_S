@@ -71,28 +71,26 @@
     mac_aml {
         layers = <0>;
         input-processors =
-        <&trackball_central_listener>,
         <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
     };
     
     win_aml {
         layers = <4>;
         input-processors = 
-            <&trackball_central_listener>,
             <&zip_temp_layer 12 600>;
     };
     
- //   mac_mouse {
-   //     layers = <9>;
-     //   input-processors =
-       //     <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-    //};
+    mac_mouse {
+        layers = <9>;
+        input-processors =
+           <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+    };
     
-   // win_mouse {
-     //   layers = <12>;
-       // input-processors =
-         //   <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-   // };  
+    win_mouse {
+        layers = <12>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+    };  
     
 
     scroller {
