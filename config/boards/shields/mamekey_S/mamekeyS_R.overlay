@@ -71,14 +71,12 @@
     def_aml {
         layers = <0>;
         input-processors =
-        <&sensor_rotation_right>,
         <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
     };
     
     win_aml {
         layers = <4>;
         input-processors = 
-            <&sensor_rotation_right>,
             <&zip_temp_layer 13 600>;
     };  
     
