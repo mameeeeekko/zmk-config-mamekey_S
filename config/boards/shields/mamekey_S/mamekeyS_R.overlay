@@ -77,17 +77,17 @@
     
     };
     
-    mac_mouse {
-        layers = <9>;
-        input-processors =
+ //   mac_mouse {
+ //       layers = <9>;
+  //      input-processors =
           // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-    };
+   // };
     
-    win_mouse {
-        layers = <12>;
-        input-processors =
+   // win_mouse {
+    //    layers = <12>;
+     //   input-processors =
            // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-    };  
+   // };  
     
 
     scroller {
