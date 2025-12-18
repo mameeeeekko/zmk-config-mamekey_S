@@ -68,26 +68,17 @@
     status = "okay";
     device = <&trackball_central>;
     
-    win_aml {
-        layers = <4>;
-        input-processors = 
-            <&zip_temp_layer 12 600>;
-    
-
-    
+    mac_mouse {
+       layers = <9>;
+        input-processors =
+           <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
     };
     
- //   mac_mouse {
- //       layers = <9>;
-  //      input-processors =
-          // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-   // };
-    
-   // win_mouse {
-    //    layers = <12>;
-     //   input-processors =
-           // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-   // };  
+    win_mouse {
+       layers = <12>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+    };  
     
 
     scroller {
@@ -130,6 +121,12 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_xy_scaler 2 1>;
+    };
+    
+    win_aml {
+        layers = <4>;
+        input-processors = 
+            <&zip_temp_layer 12 600>;   
     };
     
     mac_aml {
