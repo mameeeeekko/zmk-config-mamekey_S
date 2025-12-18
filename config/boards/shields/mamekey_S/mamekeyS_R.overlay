@@ -68,16 +68,13 @@
     status = "okay";
     device = <&trackball_central>;
     
-    mac_aml {
-        layers = <0>;
-        input-processors =
-        <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
-    };
-    
     win_aml {
         layers = <4>;
         input-processors = 
             <&zip_temp_layer 12 600>;
+    
+
+    
     };
     
     mac_mouse {
@@ -133,6 +130,12 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_xy_scaler 2 1>;
+    };
+    
+    mac_aml {
+        layers = <0>;
+        input-processors =
+        <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
     };
 
 };
