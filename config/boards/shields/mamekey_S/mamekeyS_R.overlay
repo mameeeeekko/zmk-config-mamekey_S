@@ -89,8 +89,7 @@
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            <&zip_scroll_scaler 1 12>;                      //スクロール量をa/b倍
-            //<&zip_scroll_x_scaler 1 2>;                 //X軸のスクロール速度調整 v4.1で使えない？
+            <&zip_scroll_scaler 1 15>;                      //スクロール量をa/b倍j
            };
       
     win_faster {
@@ -122,19 +121,16 @@
             <&zip_xy_scaler 1 2>;
     };
     
-
-    
-    
     win_aml {
         layers = <4>;
         input-processors = 
-            <&zip_temp_layer 12 600>;   
+            <&zip_temp_layer 12 800>;   
     };
     
     mac_aml {
         layers = <0>;
         input-processors =
-        <&zip_temp_layer 9 600>;                           //オートマウスレイヤーの選択
+        <&zip_temp_layer 9 800>;                           //オートマウスレイヤーの選択
     };
 
 };
