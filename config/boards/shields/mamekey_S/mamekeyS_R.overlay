@@ -68,17 +68,17 @@
     status = "okay";
     device = <&trackball_central>;
     
-    mac_mouse {
-       layers = <9>;
-        input-processors =
-           <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-    };
-    
     win_mouse {
        layers = <12>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
-    };  
+    }; 
+    
+    mac_mouse {
+       layers = <9>;
+        input-processors =
+           <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>;
+    }; 
     
 
     scroller {
@@ -89,7 +89,7 @@
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            <&zip_scroll_scaler 1 15>;                      //スクロール量をa/b倍j
+            <&zip_scroll_scaler 1 25>;                      //スクロール量をa/b倍j
            };
       
     win_faster {
