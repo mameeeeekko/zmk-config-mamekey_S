@@ -847,10 +847,5 @@
             sensor-bindings = <&scroll_left_right
                                &scroll_up_down
             >;
-        };             
-  
-      
-        
-               
-    };   
+        };                 
 };
