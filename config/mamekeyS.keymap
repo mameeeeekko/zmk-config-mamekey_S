@@ -22,7 +22,7 @@
 #define MOUSE 9 //mac
 #define MOUSE2 10 //mac lowspeed
 #define MOUSE3 11 //mac highspeed
-#define WMOUSE 12 /win
+#define WMOUSE 12 //win
 #define WMOUSE2 13 //win lowspeed
 #define WMOUSE3 14 //win highspeed
 #define SCROLL 15
@@ -847,5 +847,6 @@
             sensor-bindings = <&scroll_left_right
                                &scroll_up_down
             >;
-        };                 
+        }; 
+      };                 
 };
