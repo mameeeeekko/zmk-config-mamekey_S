@@ -741,7 +741,7 @@
             bindings = <
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
 &none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
-&none           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none        &trans                       &trans  &trans        &kp LG(V)        &none         &none      &mo HSCROLL
+&none           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none        &trans                       &trans  &kp LS(LG(V))        &kp LG(V)        &none         &none      &mo HSCROLL
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
         &trans        
@@ -757,7 +757,7 @@
             bindings = <
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
 &none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
-&none           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none        &trans                       &trans  &trans         &kp LG(V)        &none         &none      &mo HSCROLL
+&none           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none        &trans                       &trans  &kp LS(LG(V))       &kp LG(V)        &none         &none      &mo HSCROLL
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
         &trans        
