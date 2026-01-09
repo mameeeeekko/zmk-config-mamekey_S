@@ -70,14 +70,14 @@
     win_mouse {
        layers = <12>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
     }; 
     
     mac_mouse {
        layers = <9>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
     }; 
     
@@ -86,10 +86,10 @@
         layers = <15>;
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       //X軸反転
             <&zip_xy_scaler 1 5>,                              //移動量を1/5 スクロール量を減らすため
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
+            //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 11>;                      //スクロール量をa/b倍
            };
@@ -98,16 +98,15 @@
         layers = <16>;
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             <&zip_scroll_scaler 1 15>;                      //スクロール量をa/b倍
            };
       
     win_faster {
         layers = <14>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_scaler 2 1>;
     };       
@@ -115,7 +114,7 @@
     win_slower {
         layers = <13>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_scaler 1 2>;
     };
@@ -123,7 +122,7 @@
     mac_faster {
         layers = <11>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_scaler 2 1>;
     };
@@ -132,7 +131,7 @@
     mac_slower {
         layers = <10>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_scaler 1 2>;
     };
