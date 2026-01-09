@@ -79,11 +79,11 @@
 &mkp_input_listener {
          win_aml {
         layers = <4>;
-        input-processors = <&zip_temp_layer 12 600>;
+        input-processors = <&zip_temp_layer 12 250>;
     };
          mac_aml {
         layers = <0>;
-        input-processors = <&zip_temp_layer 9 600>;
+        input-processors = <&zip_temp_layer 9 250>;
     };
 };
 

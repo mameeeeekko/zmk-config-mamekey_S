@@ -134,13 +134,13 @@
     win_aml {
         layers = <4>;
         input-processors = 
-            <&zip_temp_layer 12 900>;   
+            <&zip_temp_layer 12 1000>;   
     };
     
     mac_aml {
         layers = <0>;
         input-processors =
-        <&zip_temp_layer 9 900>;                           //オートマウスレイヤーの選択
+        <&zip_temp_layer 9 1000>;                           //オートマウスレイヤーの選択
     };
 
 };
