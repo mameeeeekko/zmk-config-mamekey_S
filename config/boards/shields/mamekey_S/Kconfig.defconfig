@@ -19,6 +19,7 @@ config SPI
     default y
 
 config PMW3610_ALT
+    bool
     default y           
             	
 endif
