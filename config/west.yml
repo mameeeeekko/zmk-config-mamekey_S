@@ -24,8 +24,8 @@ manifest:
       revision: main
     - name: prospector-zmk-module
       remote: prospector
-      revision: main
-      #revision: feature/zephyr-4.1-lvgl9-container-fix
+      #revision: main
+      revision: feature/zephyr-4.1-lvgl9-container-fix
       path: modules/prospector-zmk-module
 
   self:
