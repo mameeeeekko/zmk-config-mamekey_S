@@ -722,7 +722,7 @@
            BT {
             bindings = <
 &bt BT_CLR_ALL  &none     &none    &none    &bt BT_CLR                                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4
-&none           &none     &none    &none    &none        &trans   &kp CAPSLOCK  &kp NUMLOCK  &none  &out OUT_TOG  &none         &none         &none             &none
+&none           &none     &none    &none    &none        &trans   &kp CAPSLOCK  &kp KP_NUMLOCK  &none  &out OUT_TOG  &none         &none         &none             &none
 &none           &none     &none    &none    &none        &none                               &none  &none         &none         &none         &trans   &trans
 &ind_bat        &ind_con  &trans   &trans   &trans       &trans                              &trans  &trans                          &trans            &trans
 
