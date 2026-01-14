@@ -389,11 +389,11 @@
         bindings = <&w_shift_p>, <&w_ctrl_p>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
-    //none is scroll up
+    //none is scroll down
     w_shift_ctrl_none_p: win_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&w_shift_ctrl_p>;
+        bindings = <&msc SCRL_DOWN>, <&w_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_p: win-enc-positive {
@@ -441,11 +441,11 @@
         bindings = <&w_shift_n>, <&w_ctrl_n>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
-    //none is scroll down
+    //none is scroll up
     w_shift_ctrl_none_n: win_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&w_shift_ctrl_n>;
+        bindings = <&msc SCRL_UP>, <&w_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     win_enc_n: win-enc-negative {
@@ -502,11 +502,11 @@
         bindings = <&m_shift_p>, <&m_ctrl_p>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
-    // none is scroll up
+    // none is scroll down
     m_shift_ctrl_none_p: mac_shift-ctrl-none-positive {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&m_shift_ctrl_p>;
+        bindings = <&msc SCRL_DOWN>, <&m_shift_ctrl_p>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     mac_enc_p: mac-enc-positive {
@@ -554,11 +554,11 @@
         bindings = <&m_shift_n>, <&m_ctrl_n>;
         mods = <(MOD_LCTL|MOD_RCTL)>;
     };
-    // none is scroll down
+    // none is scroll up
     m_shift_ctrl_none_n: mac_shift-ctrl-none-negative {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&m_shift_ctrl_n>;
+        bindings = <&msc SCRL_UP>, <&m_shift_ctrl_n>;
         mods = <(MOD_LSFT|MOD_LCTL|MOD_RSFT|MOD_RCTL)>;
     };
     mac_enc_n: mac-enc-negative {
@@ -632,7 +632,7 @@
 &trans         &trans             &trans           &trans        &trans              &trans                          &trans  &trans                                  &trans                &trans 
 
         &kp LC(UP_ARROW)       
-&kp LG(LS(TAB))       &kp LG(TAB)               
+&kp LC(LEFT_ARROW)       &kp LC(RIGHT_ARROW)                
         &kp LC(DOWN_ARROW) 
             >;  
             sensor-bindings = <&scroll_left_right
