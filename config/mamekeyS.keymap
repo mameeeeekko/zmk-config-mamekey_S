@@ -331,7 +331,7 @@
     zoom_in_out_win: behavior_sensor_rotate_zoom_in_out_win {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp LC(PLUS)>, <&kp LC(MINUS)>;
+            bindings = <&kp LC(JP_PLUS)>, <&kp LC(MINUS)>;
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };  
