@@ -19,7 +19,6 @@
 #define JSYM 6 //WIN JIS
 #define WARR 7 //WIN
 #define BT 8
-<<<<<<< .merge_file_pzKFUC
 #define MOUSE 9 //mac
 #define MOUSE2 10 //mac lowspeed
 #define MOUSE3 11 //mac highspeed
@@ -147,7 +146,6 @@
             key-positions = <5 6>;
         };
         
-<<<<<<< .merge_file_pzKFUC
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             layers = <0>; 
@@ -160,8 +158,6 @@
             key-positions = <3 4>;
         };
         
-=======
->>>>>>> .merge_file_Wyz9Jc
         
         minus {
             bindings = <&kp MINUS>;
@@ -619,15 +615,9 @@
 &kp LG(Z)     &kp LG(LS(Z))  &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &kp LG(LS(N))  &trans                  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
 &trans        &trans         &trans                &trans                 &trans     &trans                  &trans  &trans                                     &kp PERIOD       &trans
 
-<<<<<<< .merge_file_pzKFUC
         &kp LS(UP_ARROW)      
 &kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
       &kp LS(DOWN_ARROW)  
-=======
-        &kp LC(UP_ARROW)       
-&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)               
-        &kp LC(DOWN_ARROW) 
->>>>>>> .merge_file_Wyz9Jc
             >; 
             sensor-bindings = <&scroll_up_down
             &zoom_in_out_mac
@@ -641,15 +631,9 @@
 &kp F6         &kp F7             &kp F8           &none         &kp PIPE            &trans                          &trans  &kp TILDE  &kp BACKSLASH   &none        &kp LEFT_BRACE        &kp RIGHT_BRACE 
 &trans         &trans             &trans           &trans        &trans              &trans                          &trans  &trans                                  &trans                &trans 
 
-<<<<<<< .merge_file_pzKFUC
         &kp LC(UP_ARROW)       
 &kp LC(LEFT_ARROW)       &kp LC(RIGHT_ARROW)                
         &kp LC(DOWN_ARROW) 
-=======
-        &trans        
-&trans         &trans                
-        &trans 
->>>>>>> .merge_file_Wyz9Jc
             >;  
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -694,15 +678,9 @@
 &kp LC(Z)      &kp LC(Y)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &kp LC(LS(N))  &trans                &trans   &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
 &trans         &trans     &trans                  &trans                   &trans     &trans                  &trans   &trans                                             &kp PERIOD       &trans
 
-<<<<<<< .merge_file_pzKFUC
         &kp LS(UP_ARROW)      
 &kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
       &kp LS(DOWN_ARROW) 
-=======
-        &trans        
-&kp LS(LEFT_ARROW)       &kp LS(RIGHT_ARROW)                
-        &trans  
->>>>>>> .merge_file_Wyz9Jc
             >;
             sensor-bindings = <&scroll_up_down
             &zoom_in_out_win
@@ -716,15 +694,9 @@
 &kp F6        &kp F7      &kp F8           &none         &kp JP_PIPE   &trans                   &trans  &kp JP_TILDE  &kp JP_YEN     &none        &kp JP_LBRC  &kp JP_RBRC 
 &trans        &trans      &trans           &trans        &trans        &trans                   &trans  &trans                                    &trans       &trans 
 
-<<<<<<< .merge_file_pzKFUC
         &kp LG(UP_ARROW)       
 &kp LG(LEFT_ARROW)       &kp LG(RIGHT_ARROW)                
         &kp LG(DOWN_ARROW) 
-=======
-        &trans        
-&trans         &trans                
-        &trans  
->>>>>>> .merge_file_Wyz9Jc
             >;
             sensor-bindings = <&scroll_left_right
             &vol_up_down
@@ -766,7 +738,6 @@
          MOUSE {
             bindings = <
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
-<<<<<<< .merge_file_pzKFUC
 &none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
 &mt_exit_AML_on_tap LEFT_SHIFT Z         &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)     &none        &trans                       &trans  &kp LS(LG(V))         &kp LG(V)        &none         &none      &mo HSCROLL
 &trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                       &trans  &trans                            &trans            &trans
@@ -786,10 +757,6 @@
 &none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
 &none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
 &mt_exit_AML_on_tap LEFT_SHIFT Z           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none        &trans                       &trans  &kp LS(LG(V))        &kp LG(V)        &none         &none      &mo HSCROLL
-=======
-&none           &none     &mkp MB4   &mkp MB5    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
-&none           &none     &none    &none    &none        &trans                       &trans  &none         &kp LG(V)        &none         &none      &none
->>>>>>> .merge_file_Wyz9Jc
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
 
         &trans        
@@ -797,7 +764,6 @@
         &trans  
             >;
             sensor-bindings = <&scroll_up_down 
-<<<<<<< .merge_file_pzKFUC
             &scroll_left_right                 
              >;
         };        
@@ -866,12 +832,6 @@
              >;
         }; 
         
-=======
-            &vol_up_down                   
-             >;
-        };                    
-
->>>>>>> .merge_file_Wyz9Jc
           SCROLL {
             bindings = <
 &none          &none     &none    &none     &none                                             &none         &none         &none         &none      &none
@@ -884,9 +844,8 @@
         &trans 
             >;
             sensor-bindings = <&scroll_left_right
-                               &vol_up_down
+                               &scroll_up_down
             >;
-<<<<<<< .merge_file_pzKFUC
         };   
         
             HSCROLL {
@@ -905,8 +864,4 @@
             >;
         }; 
       };                 
-=======
-        };        
-    };   
->>>>>>> .merge_file_Wyz9Jc
 };
