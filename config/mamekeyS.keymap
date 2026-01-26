@@ -596,7 +596,7 @@
             bindings = <
 &kp Q               &kp W             &kp E             &kp R            &kp T                                                    &kp Y           &kp U          &kp I        &kp O      &kp P
 &kp A               &kp S       &mt LEFT_WIN D          &mt RCTRL F      &kp G     &kp C_MUTE   &kp LA(C)   &to JIS  &trans    &kp H           &kp J          &kp K        &kp L      &kp SEMICOLON
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X      &kp C      &kp V            &kp B     &tog NUM                             &tog MARR       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X      &kp C      &kp V            &kp B     &tog NUM                             &none       &kp N        &kp M       &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL           &kp LEFT_WIN      &kp LEFT_ALT      &trans           &lt NUM SPACE   &mt LEFT_WIN DEL               &kp BACKSPACE   &lt SYM ENTER                            &mo BT     &lt MARR LC(SPC)
 
         &kp UP_ARROW        
@@ -659,11 +659,11 @@
             bindings = <
 &kp Q             &kp W             &kp E            &kp R           &kp T                                                    &kp Y          &kp U           &kp I        &kp O      &kp P
 &kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &kp C_MUTE  &kp LG(V)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &moSEMI
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &tog WARR       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &none       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LEFT_WIN DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
         &kp UP_ARROW        
-&kp LEFT_ARROW  &kp RIGHT_ARROW 
+&kp LEFT_ARROW  &kp RIGHT_ARROW
         &kp DOWN_ARROW
             >;
             sensor-bindings = <&win_enc
@@ -723,8 +723,8 @@
             bindings = <
 &bt BT_CLR_ALL  &none     &none    &none    &bt BT_CLR                                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4
 &none           &none     &none    &none    &none        &trans   &kp CAPSLOCK  &kp KP_NUMLOCK  &none  &out OUT_TOG  &none         &none         &none             &none
-&none           &none     &none    &none    &none        &none                               &none  &none         &none         &none         &trans   &trans
-&ind_bat        &ind_con  &trans   &trans   &trans       &trans                              &trans  &trans                          &trans            &trans
+&bootloader           &sys_reset     &none    &none    &none        &kp LEFT_SHIFT                               &none  &none         &none         &none         &sys_reset   &bootloader
+&ind_bat        &ind_con  &trans   &trans   &trans       &trans                                      &trans  &trans                            &trans            &trans
 
         &trans        
 &trans         &trans                
@@ -737,10 +737,10 @@
         
          MOUSE {
             bindings = <
-&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none         &none         &kp LG(X)         &none      &none
-&none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans      &trans   &trans  &trans  &none         &mkp MB1      &kp LG(C)         &mkp MB2      &mo SCROLL
-&mt_exit_AML_on_tap LEFT_SHIFT Z         &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)     &none        &trans                       &trans  &kp LS(LG(V))         &kp LG(V)        &none         &none      &mo HSCROLL
-&trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                       &trans  &trans                            &trans            &trans
+&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                                              &none         &none         &kp LG(X)         &none      &none
+&none           &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)    &none   &trans            &trans   &trans    &none  &none         &mkp MB1      &kp LG(C)        &mkp MB2      &mo SCROLL
+&mt_exit_AML_on_tap LEFT_SHIFT Z    &none   &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)  &none  &none                    &none  &kp LS(LG(V))     &kp LG(V)        &none         &none      &mo HSCROLL
+&trans          &trans   &trans   &trans   &mo MOUSE2       &mo MOUSE3                                                &trans  &trans                                           &trans    &trans
 
         &trans        
 &trans         &trans                
