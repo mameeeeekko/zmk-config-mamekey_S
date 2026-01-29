@@ -20,14 +20,6 @@
 ---
 include:
   - board: xiao_ble
-    shield: mamekeyS_R rgbled_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: xiao_ble
-    shield: mamekeyS_L rgbled_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: xiao_ble
     shield: settings_reset
   - board: xiao_ble
     shield: mamekeyS_R rgbled_adapter
