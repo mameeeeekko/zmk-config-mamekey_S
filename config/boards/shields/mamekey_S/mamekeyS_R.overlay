@@ -36,8 +36,8 @@
             psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
                 <NRF_PSEL(SPIM_MOSI, 0, 4)>,
                 <NRF_PSEL(SPIM_MISO, 0, 4)>;
-                 bias-pull-up; // Hi-Z回避　フリーズ回避
-            //low-power-enable;  // フリーズの原因？
+            //  bias-pull-up; // Hi-Z回避　フリーズ回避
+            low-power-enable;  // フリーズの原因？
         };
     };
 };
@@ -55,7 +55,7 @@
         status = "okay";
         compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         reg = <0>;
-        spi-max-frequency = <1000000>;
+        spi-max-frequency = <2000000>;
         motion-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
         res-cpi = <500>;
         zephyr,axis-x = <INPUT_REL_X>;
