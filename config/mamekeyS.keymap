@@ -116,19 +116,19 @@
         };
 
         bt0_mac: bt0_mac {
-    　　　compatible = "zmk,behavior-macro";
-    　　　#binding-cells = <0>;
-    　　　bindings =
-       　　 <&bt BT_SEL 0>
-        　　<&layer_move 0>;
+         ompatible = "zmk,behavior-macro";
+         #binding-cells = <0>;
+         bindings =
+          <&bt BT_SEL 0>
+          <&layer_move 0>;
 };
 
-　　　　　bt1_win: bt1_win {
-   　　　　 compatible = "zmk,behavior-macro";
-   　　　　 #binding-cells = <0>;
-   　　　　 bindings =
-      　　  <&bt BT_SEL 1>
-       　　 <&layer_move JIS>;
+        bt1_win: bt1_win {
+         compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings =
+           <&bt BT_SEL 1>
+           <&layer_move JIS>;
 };
     };
     
