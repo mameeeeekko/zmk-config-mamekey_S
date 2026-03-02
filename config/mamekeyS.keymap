@@ -209,7 +209,7 @@
         };
         
         mac_layer_CUT {
-            bindings = <&kp LG(Xh)>;
+            bindings = <&kp LG(X)>;
             layers = <0>;
             key-positions = <6 8>;
         };
