@@ -68,23 +68,8 @@
     status = "okay";
     device = <&trackball_central>;
     
-    win_mouse {
-       layers = <12>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
-    }; 
-    
-    mac_mouse {
-       layers = <9>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
-    }; 
-    
-
     scroller {
-        layers = <15>;
+        layers = <9>;
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       //X軸反転
@@ -93,94 +78,9 @@
             //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 11>;                      //スクロール量をa/b倍
-           };
-           
-    fast_scroller {
-        layers = <16>;
-        input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
-            <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_scaler 1 15>;                      //スクロール量をa/b倍
-           };
-      
-    win_faster {
-        layers = <14>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_scaler 2 1>;
-    };       
-    
-    win_slower {
-        layers = <13>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_scaler 1 2>;
-    };
-    
-    mac_faster {
-        layers = <11>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_scaler 2 1>;
-    };
-    
-    
-    mac_slower {
-        layers = <10>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_scaler 1 2>;
-    };
-    
-    win_aml {
-        layers = <4>;
-        input-processors = 
-            <&zip_temp_layer 12 650>;   //オートマウスレイヤーwin
-    };
-    
-    mac_aml {
-        layers = <0>;
-        input-processors =
-        <&zip_temp_layer 9 650>;                           //オートマウスレイヤーmac
-    };
+           }; 
 
 };
-
-//right hand trackball AML not release key
-    &zip_temp_layer {
-    excluded-positions = <
-        2 // e
-        3 // r
-        7 // i
-        12 // d
-        13 // f
-        20 // J
-        21 // K
-        22 // L
-        23 // ;
-        24 // z(shift)
-        26 // c
-        27 // v
-        31 // n
-        32 // m
-        35 // /
-        36 // ctrl
-        37 // win(command)
-        40 // space
-        41 // Del
-        
-                >;
-    };
-    
-//Prevent accidental AML activation
-    &zip_temp_layer {
-        require-prior-idle-ms = <350>;
-    };
 
 
 
