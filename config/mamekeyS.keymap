@@ -99,7 +99,7 @@
                  <&kp SPACE>,
                  <&macro_release>,
                  <&kp LCTRL>;
-        }
+        };
     };
     
     combos {
