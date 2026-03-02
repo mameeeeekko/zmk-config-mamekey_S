@@ -562,7 +562,15 @@
             bindings = <&kp JP_SEMI>, <&kp JP_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
      }; 
+　　 ltSEMI: ltSEMI {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
 
+            bindings = <&moSEMI>, <&mo SCROLL>;   // ← LTはレイヤー名
+        };
  };    
 
 
@@ -636,7 +644,7 @@
           JIS {
             bindings = <
 &kp Q             &kp W             &kp E            &kp R           &kp T                                                    &kp Y          &kp U           &kp I        &kp O      &kp P
-&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &kp C_MUTE  &kp LG(V)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &lt SCROLL moSEMI
+&kp A             &kp S        &mt RIGHT_ALT D       &mt RCTRL F     &kp G       &kp C_MUTE  &kp LG(V)  &to O   &trans       &kp H          &kp J           &kp K        &kp L      &ltSEMI
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X   &kp C      &kp V           &kp B       &tog JNUM                      &none       &kp N          &kp M           &kp COMMA    &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN      &kp LEFT_ALT     &mt LCTRL DEL   &lt JNUM SPACE  &mt LEFT_WIN DEL               &kp BACKSPACE  &lt JSYM ENTER                            &mo BT     &lt WARR LA(GRAVE)
 
