@@ -37,7 +37,7 @@
                 <NRF_PSEL(SPIM_MOSI, 0, 4)>,
                 <NRF_PSEL(SPIM_MISO, 0, 4)>;
             //  bias-pull-up; // Hi-Z回避　フリーズ回避
-            low-power-enable;  // フリーズの原因？
+                low-power-enable;  // フリーズの原因？
         };
     };
 };
@@ -55,7 +55,7 @@
         status = "okay";
         compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         reg = <0>;
-        spi-max-frequency = <2000000>;
+        spi-max-frequency = <1000000>; //1MHz - 2MHz
         motion-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
         res-cpi = <500>;
         zephyr,axis-x = <INPUT_REL_X>;
@@ -88,11 +88,11 @@
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       //X軸反転
-            <&zip_xy_scaler 1 5>,                              //移動量を1/5 スクロール量を減らすため
+            <&zip_xy_scaler 1 10>,                              //移動量をa/b スクロール量を減らすため
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
             //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            <&zip_scroll_scaler 1 11>;                      //スクロール量をa/b倍
+            <&zip_scroll_scaler 1 5>;                      //スクロール量をa/b倍
            };
            
     fast_scroller {
@@ -101,7 +101,7 @@
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_scaler 1 15>;                      //スクロール量をa/b倍
+            <&zip_scroll_scaler 1 8>;                      //スクロール量をa/b倍
            };
       
     win_faster {
