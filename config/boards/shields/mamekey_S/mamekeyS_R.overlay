@@ -56,7 +56,7 @@
         compatible = "pixart,pmw3610-alt";  //トラボセンサ用のドライバとバインド
         reg = <0>;
         spi-max-frequency = <1000000>; //1MHz - 2MHz
-        motion-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
+        irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
         cpi = <500>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
