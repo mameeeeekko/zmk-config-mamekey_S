@@ -91,8 +91,8 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       //X軸反転
             <&zip_xy_scaler 1 10>,                              //移動量をa/b スクロール量を減らすため
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
-            //<&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
+            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                      //スクロール量をa/b倍
            };
            
@@ -100,7 +100,9 @@
         layers = <16>;
         input-processors = 
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,   //スクロールのY軸反転
+            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転 
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_scaler 1 8>;                      //スクロール量をa/b倍
            };
