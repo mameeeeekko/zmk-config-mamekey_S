@@ -53,13 +53,13 @@
 
     trackball_central: trackball_central@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
+        compatible = "pixart,pmw3610-alt";  //トラボセンサ用のドライバとバインド
         reg = <0>;
         spi-max-frequency = <1000000>; //1MHz - 2MHz
         motion-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
-        res-cpi = <500>;
-        zephyr,axis-x = <INPUT_REL_X>;
-        zephyr,axis-y = <INPUT_REL_Y>;
+        cpi = <500>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
 
