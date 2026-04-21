@@ -71,14 +71,14 @@
     
     win_mouse {
        layers = <12>;
-        input-processors =
+        //input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
     }; 
     
     mac_mouse {
        layers = <9>;
-        input-processors =
+        //input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
     }; 
@@ -118,7 +118,7 @@
     win_slower {
         layers = <13>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_scaler 1 2>;
     };
