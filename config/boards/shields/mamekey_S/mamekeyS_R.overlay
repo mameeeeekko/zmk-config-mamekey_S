@@ -186,7 +186,6 @@
 //Prevent accidental AML activation
     &zip_temp_layer {
         require-prior-idle-ms = <350>;
-        require-prior-motion = <50>;
     };
 
 
