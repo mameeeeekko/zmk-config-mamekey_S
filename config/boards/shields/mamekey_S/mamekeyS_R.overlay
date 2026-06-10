@@ -55,7 +55,7 @@
         status = "okay";
         compatible = "pixart,pmw3610-alt";  //トラボセンサ用のドライバとバインド
         reg = <0>;
-        spi-max-frequency = <1000000>; //1MHz - 2MHz
+        spi-max-frequency = <2000000>; //1MHz - 2MHz
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
         cpi = <550>;
         evt-type = <INPUT_EV_REL>;
@@ -144,13 +144,13 @@
     win_aml {
         layers = <4>;
         input-processors = 
-            <&zip_temp_layer 12 800>;   //オートマウスレイヤーwin
+            <&zip_temp_layer 12 850>;   //オートマウスレイヤーwin
     };
     
     mac_aml {
         layers = <0>;
         input-processors =
-        <&zip_temp_layer 9 800>;         //オートマウスレイヤーmac
+        <&zip_temp_layer 9 850>;         //オートマウスレイヤーmac
     };
 
 };
