@@ -610,6 +610,21 @@
             bindings = <&kp JP_SEMI>, <&kp JP_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
      }; 
+     
+    //Click
+    shift_j_mouse: shift_j_mouse {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&mkp LCLK>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
+    shift_l_mouse: shift_l_mouse {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&mkp RCLK>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
 
  };    
 
