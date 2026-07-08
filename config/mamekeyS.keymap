@@ -780,7 +780,7 @@
          
          MOUSE2 {
             bindings = <
-&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &&none      &kp LC(LS(TAB))       &kp LC(TAB)     &kp LG(X)        &none
+&none          &none     &kp LC(LS(TAB))     &kp LC(TAB)     &none                                             &none      &kp LC(LS(TAB))       &kp LC(TAB)     &kp LG(X)        &none
 &none      &none     &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none   &trans  &trans   &trans  &trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LC(RIGHT_ARROW)  &none
 &mt_exit_AML_on_tap LEFT_SHIFT Z           &none     &kp LC(LEFT_ARROW)    &kp LC(RIGHT_ARROW)    &none      &trans   &trans  &kp LG(V)  &mkp MB1              &mkp MB2       &kp LG(C)        &mo SCROLL
 &trans          &trans   &trans   &trans   &trans       &trans                       &trans  &trans                            &trans            &trans
