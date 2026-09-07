@@ -86,7 +86,7 @@
     
 
     scroller {
-        layers = <15>;
+        layers = <13>;
         input-processors = 
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       //Y軸反転
@@ -98,7 +98,7 @@
            };
            
     fast_scroller {
-        layers = <16>;
+        layers = <14>;
         input-processors = 
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
@@ -109,7 +109,7 @@
            };
       
     win_faster {
-        layers = <14>;
+        layers = <12>;
         input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
@@ -117,7 +117,7 @@
     };       
     
     win_slower {
-        layers = <13>;
+        layers = <11>;
         input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
@@ -125,7 +125,7 @@
     };
     
     mac_faster {
-        layers = <11>;
+        layers = <10>;
         input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
@@ -134,7 +134,7 @@
     
     
     mac_slower {
-        layers = <10>;
+        layers = <9>;
         input-processors =
             //<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
